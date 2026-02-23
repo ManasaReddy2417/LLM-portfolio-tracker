@@ -1,0 +1,43 @@
+name: Update LLM Portfolio Dashboard
+
+on:
+  schedule:
+    - cron: '30 21 * * 1-5'   # Mon–Fri at 9:30 PM UTC (after US market close 4 PM ET)
+  workflow_dispatch:           # manual trigger anytime from GitHub Actions tab
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas jupyter nbconvert ipykernel
+
+      - name: Execute notebook
+        run: |
+          jupyter nbconvert \
+            --to notebook \
+            --execute \
+            --ExecutePreprocessor.timeout=300 \
+            LLM_Portfolio_Tracker_v10.ipynb \
+            --output LLM_Portfolio_Tracker_executed.ipynb
+
+      - name: Extract HTML to docs/
+        run: python extract_html.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
+          commit_message: 'Auto-update dashboard - ${{ github.run_id }}'
