@@ -342,7 +342,7 @@ def generate_html(llm_results, stock_data, all_trading_days):
     html += '  </div>\n'
     html += '''
   <div class="price-section">
-    <div class="section-title">Yahoo Finanace US Stock Close Prices — Feb 2–28, 2026</div>
+    <div class="section-title">Yahoo Finance US Stock Close Prices — Feb 2–28, 2026</div>
     <div class="price-table-wrap"><table>
       <thead><tr><th style="text-align:left;padding-left:10px;">Stock</th>
 '''
