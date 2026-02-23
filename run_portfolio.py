@@ -446,7 +446,8 @@ Plotly.newPlot('line-chart', lineTraces, {{
     color: '#374151',
     tickfont: {{ size: 13, color: '#374151', family: 'Inter,sans-serif' }},
     zeroline: false, showline: true, linecolor: '#cbd5e1', tickcolor: '#94a3b8',
-    automargin: true, tickangle: 0
+    automargin: true, tickangle: 0,
+    range: [-0.8, dates.length - 0.8]
   }},
   yaxis: {{
     title: {{ text: 'Portfolio Value ($)', font: {{ size: 14, color: '#1e3a8a', family: 'Inter,sans-serif' }}, standoff: 25 }},
