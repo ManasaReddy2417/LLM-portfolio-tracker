@@ -24,8 +24,8 @@ jobs:
         run: |
           jupyter nbconvert --to notebook --execute \
             --ExecutePreprocessor.timeout=300 \
-            LLM_Portfolio_Tracker_v10.ipynb \
-            --output LLM_Portfolio_Tracker_v10.ipynb
+            LLM_Portfolio_Tracker_Feb.ipynb \
+            --output LLM_Portfolio_Tracker_Feb.ipynb
 
       - name: Extract HTML to docs/
         run: python extract_html.py
