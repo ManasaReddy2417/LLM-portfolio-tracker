@@ -54,10 +54,10 @@ WEEKS_DATA = [
         'start_date': datetime(2026, 2, 23),
         'end_date': datetime(2026, 2, 27),
         'portfolios': {
-            'ChatGPT':  [{"stock": "NVDA",  "weight": 25},{"stock": "TSLA",  "weight": 20},{"stock": "AMZN",  "weight": 20},{"stock": "META",  "weight": 20},{"stock": "PLTR",  "weight": 15}],
-            'Grok':     [{"stock": "NVDA",  "weight": 30},{"stock": "AMD",   "weight": 20},{"stock": "PLTR",  "weight": 20},{"stock": "AMZN",  "weight": 15},{"stock": "GOOGL", "weight": 15}],
-            'DeepSeek': [{"stock": "TQQQ", "weight": 40},{"stock": "NVDA", "weight": 35},{"stock": "SPXL", "weight": 25}],
-            'Claude AI':[{"stock": "NVDA",  "weight": 25},{"stock": "GOOGL", "weight": 20},{"stock": "META",  "weight": 20},{"stock": "TSM",   "weight": 15},{"stock": "AMZN",  "weight": 10},{"stock": "SPY",   "weight": 10}]
+             'ChatGPT':  [{"stock": "FSLY", "weight": 20}, {"stock": "VAL", "weight": 20}, {"stock": "DHX", "weight": 20}, {"stock": "MU", "weight": 20}, {"stock": "GOOGL", "weight": 20}],
+             'Claude AI': [{"stock": "NVDA", "weight": 25}, {"stock": "MSFT", "weight": 20}, {"stock": "AVGO", "weight": 20}, {"stock": "GOOGL", "weight": 15}, {"stock": "META", "weight": 10}, {"stock": "AMD", "weight": 10}],
+             'DeepSeek':  [{"stock": "NVDA", "weight": 40}, {"stock": "CRM", "weight": 15}, {"stock": "INTU", "weight": 15}, {"stock": "CAVA", "weight": 10}, {"stock": "HIMS", "weight": 10}, {"stock": "RKLB", "weight": 10}],
+             'Grok':      [{"stock": "NVDA", "weight": 40}, {"stock": "HD", "weight": 15}, {"stock": "LOW", "weight": 15},{"stock": "IONQ", "weight": 10},{"stock": "CRM", "weight": 10},{"stock": "WDAY", "weight": 10}]
         }
     }
 ]
