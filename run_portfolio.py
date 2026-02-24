@@ -360,7 +360,7 @@ def generate_html(llm_results, stock_data, all_trading_days):
         html += f'<td class="{cc}">{chg:+.2f}%</td></tr>\n'
     html += '    </tbody></table></div>\n'
     html += '''
-    <div class="section-title" style="margin-top:36px;">S&amp;P 500 — Feb 2–28, 2026</div>
+    <div class="section-title" style="margin-top:36px;">Normalized S&amp;P 500 Points — Feb 2–28, 2026</div>
     <div class="price-table-wrap"><table>
       <thead><tr><th style="text-align:left;padding-left:10px;">Metric</th>
 '''
