@@ -61,7 +61,7 @@ WEEKS_DATA = [
         }
     }
 ]
-print(f'🤖 {len(WEEKS_DATA)} weeks defined')
+print(f' {len(WEEKS_DATA)} weeks defined')
 
 # Cell 4: Trading Days
 def get_all_trading_days():
@@ -261,7 +261,7 @@ def generate_html(llm_results, stock_data, all_trading_days):
 '''
     html = html_open
     html += f'''  <div class="header">
-    <h1>🤖 LLM Portfolio Comparison — February 2026</h1>
+    <h1> LLM Portfolio Comparison — February 2026</h1>
     <p class="subtitle">Feb 2 – Feb 28, 2026 | $1,000 Initial Investment | Rolling Weekly Strategy</p>
     <p class="meta">Last Updated: {fetch_time}</p>
   </div>
