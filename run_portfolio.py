@@ -9,7 +9,7 @@ import json
 
 INITIAL_INVESTMENT = 1000
 MONTH_START = datetime(2026, 2, 2)
-MONTH_END   = datetime(2026, 2, 28)
+MONTH_END   = datetime(2026, 2, 27)
 
 print(f'💰 Initial Investment: ${INITIAL_INVESTMENT}')
 print(f'📅 Tracking: {MONTH_START.strftime("%b %d, %Y")} → {MONTH_END.strftime("%b %d, %Y")}')
@@ -61,7 +61,7 @@ WEEKS_DATA = [
         }
     }
 ]
-print(f'🤖 {len(WEEKS_DATA)} weeks defined')
+print(f' {len(WEEKS_DATA)} weeks defined')
 
 # Cell 4: Trading Days
 def get_all_trading_days():
@@ -334,16 +334,16 @@ def generate_html(llm_results, stock_data, all_trading_days):
 '''
     html = html_open
     html += f'''  <div class="header">
-    <h1>🤖 LLM Portfolio Comparison — February 2026</h1>
-    <p class="subtitle">Feb 2 – Feb 28, 2026 | $1,000 Initial Investment | Rolling Weekly Strategy</p>
+    <h1> LLM Portfolio Comparison — February 2026</h1>
+    <p class="subtitle">Feb 2 – Feb 27, 2026 | $1,000 Initial Investment | Rolling Weekly Strategy</p>
     <p class="meta">🕐 Last Updated: {fetch_time}</p>
   </div>
   <div class="section">
-    <div class="section-title">📈 Cumulative Portfolio Value vs S&amp;P 500 (Feb 2 – Feb 28)</div>
+    <div class="section-title">📈 Cumulative Portfolio Value vs S&amp;P 500 (Feb 2 – Feb 27)</div>
     <div class="chart-box"><div id="line-chart"></div></div>
   </div>
   <div class="section alt">
-    <div class="section-title">📊 Portfolio Growth from $1,000 — Ranked Highest to Lowest</div>
+    <div class="section-title">📊 Top Performing Portfolio — Ranked Highest to Lowest</div>
     <div class="bar-stage">
 '''
     max_val    = ranked[0][1]['final_value']
@@ -415,7 +415,7 @@ def generate_html(llm_results, stock_data, all_trading_days):
     html += '  </div>\n'
     html += '''
   <div class="price-section">
-    <div class="section-title">📋 Yahoo Finance US Stock Close Prices — Feb 2–28, 2026</div>
+    <div class="section-title">📋 Yahoo Finance US Stock Close Prices — Feb 2–27, 2026</div>
     <div class="price-table-wrap"><table>
       <thead><tr><th style="text-align:left;padding-left:10px;">Stock</th>
 '''
@@ -433,7 +433,7 @@ def generate_html(llm_results, stock_data, all_trading_days):
         html += f'<td class="{cc}">{chg:+.2f}%</td></tr>\n'
     html += '    </tbody></table></div>\n'
     html += '''
-    <div class="section-title" style="margin-top:36px;">📊 Normalized S&amp;P 500 Points — Feb 2–28, 2026</div>
+    <div class="section-title" style="margin-top:36px;">📊 Normalized S&amp;P 500 Points — Feb 2–27, 2026</div>
     <div class="price-table-wrap"><table>
       <thead><tr><th style="text-align:left;padding-left:10px;">Metric</th>
 '''
