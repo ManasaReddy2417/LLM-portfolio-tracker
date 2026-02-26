@@ -345,7 +345,7 @@ def generate_html(llm_results, stock_data, all_trading_days):
     <div class="chart-box"><div id="line-chart"></div></div>
   </div>
   <div class="section alt">
-    <div class="section-title">📊 Portfolio Growth from $1,000 — Ranked Highest to Lowest</div>
+    <div class="section-title">📊 Top Performing Portfolios - Ranked Highest to Lowest</div>
     <div class="bar-stage">
 '''
     max_val    = ranked[0][1]['final_value']
