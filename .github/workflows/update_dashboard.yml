@@ -2,16 +2,10 @@ name: Update LLM Portfolio Dashboard
 
 on:
   schedule:
-    # ── Runs every 3 hours, Mon–Fri (UTC) ────────────────────────────
-    # US market is roughly 14:30–21:00 UTC, so we cover pre/during/post
-    - cron: '0 0 * * 1-5'   # midnight UTC
-    - cron: '0 3 * * 1-5'   # 3 AM UTC
-    - cron: '0 6 * * 1-5'   # 6 AM UTC  (pre-market NY)
-    - cron: '0 9 * * 1-5'   # 9 AM UTC
-    - cron: '0 12 * * 1-5'  # 12 PM UTC (pre-market open)
-    - cron: '0 15 * * 1-5'  # 3 PM UTC  (market opens 9:30 AM ET)
-    - cron: '0 18 * * 1-5'  # 6 PM UTC  (mid-session)
-    - cron: '0 21 * * 1-5'  # 9 PM UTC  (after close)
+    # ── Every hour, Mon–Fri (UTC) ─────────────────────────────────────
+    # Texas is CT (UTC-6 CST / UTC-5 CDT)
+    # Running every hour covers full pre-market through after-hours
+    - cron: '0 * * * 1-5'
 
   # ── Manual trigger anytime from GitHub Actions tab ────────────────
   workflow_dispatch:
